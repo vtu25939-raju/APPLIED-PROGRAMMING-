@@ -1,13 +1,10 @@
 class Solution {
-    public int[] runningSum(int[] nums) {
-        int[] result = new int[nums.length];
-        
-        int sum = 0;
-        for (int i = 0; i < nums.length; i++) {
-            sum += nums[i];
-            result[i] = sum;
-        }
-        
-        return result;
-    }
-}
+        public int[] runningSum(int[] nums) {
+                // We can modify the array in-place to save space
+                        for (int i = 1; i < nums.length; i++) {
+                                    // Each element becomes the sum of itself and the previous element
+                                                nums[i] = nums[i] + nums[i - 1];
+                                                        }
+                                                                return nums;
+                                                                    }
+                                                                    }
